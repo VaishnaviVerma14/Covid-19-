@@ -1,0 +1,107 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/UserDashboard.html";
+   }
+
+   function DeleteAppoinment(row) {
+    var i =row.parentNode.parentNode.rowIndex;
+    document.getElementById("tblDataShow").deleteRow(i);
+   }
+  
+   function SaveAppoinment() {
+    var table = document.getElementById("tblDataShow");
+    var rowCount=table.rows.length;
+    var tblRow=` <tr>
+    <td>`+(rowCount)+`</td>
+    <td>`+$("#ddlType option:selected").text()+`</td>
+    <td>`+$("#txtAppoinmentDate").val()+`</td>
+    <td>`+$("#txtTime").val()+`</td>
+    <td>`+$("#txtName").val()+`</td>
+    <td>`+$("#txtAdhaarNumber").val()+`</td>
+    <td>`+$("#txtPhoneNumber").val()+`</td>
+    <td>`+$("#ddlHospital option:selected").text()+`</td>   
+    <td><button onclick="DeleteAppoinment(this)" title="Delete Appoinment">Delete</button></td>
+    </tr>`;
+    $("#tblDataShow").append(tblRow);
+   }
+
+
+   function Logout() {
+    location.href = "../View/UserLogin.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/Doctor.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> Request Appoinment <button style="float: right;" onclick="BackFunc()">Back To Main Dashboard</button></h1> <br>    
+       <div>
+        <label style="color: black;">Type</label>
+        <select id="ddlType" style="margin-left: 124px; width: 177px">
+            <option>-Select-</option>
+            <option>Covid-19 Test</option>
+            <option>Covid-19 Vaccination</option>
+        </select> 
+        <label style="color: black;">Date Of Appoinment</label>
+        <input type="date" id="txtAppoinmentDate" style="width: 169px;"> 
+        <label style="color: black;">Time</label>
+        <input type="time" id="txtTime" style="margin-left: 25px;">
+        <label style="color: black;">Name</label>
+        <input type="text" id="txtName">               
+       </div>  
+       <br> 
+       <div>
+        <label style="color: black;">Adhaar Card Number</label>
+        <input type="text" id="txtAdhaarNumber">
+        <label style="color: black;">Phone Number</label>
+        <input type="text" id="txtPhoneNumber" style="margin-left: 37px">
+        <label style="color: black;">Hospital</label>
+        <select id="ddlHospital">
+            <option>-Select-</option>
+            <option>City Hospital</option>
+            <option>Max Hospital</option>
+        </select>    
+       </div>
+       
+    <div><br> <br> 
+        <button id="btnSave" title="Save Data" style="margin-left:165px;width: 120px" onclick="SaveAppoinment()">Save</button>         
+    </div>
+<br><br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Type</th>
+            <th>Date Of Appoinment</th>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Adhaar Card No</th>
+            <th>Phone Number</th>
+            <th>Hospital</th>
+            <th>Delete</th>
+        </tr>
+    <tr>
+    <td>1</td>
+    <td>Covid-19 Test</td>
+    <td>20-Jan-2022</td>
+    <td>11:00-12:00 AM</td>
+    <td>Vijay</td>
+    <td>8654 3215 9864</td>
+    <td>9856324785</td>
+    <td>City Hospital</td>
+    <td><button onclick="DeleteAppoinment(this)" title="Delete Appoinment">Delete</button></td>
+    </tr>
+
+    </table>
+
+
+</body>    
+</html>     

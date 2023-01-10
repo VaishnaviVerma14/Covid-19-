@@ -1,0 +1,93 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/Dashboard.html";
+   }
+
+
+   function DeleteVac(row) {
+    var i =row.parentNode.parentNode.rowIndex;
+    document.getElementById("tblDataShow").deleteRow(i)
+   }
+
+
+   function EditVac() {
+    $("#txtVaccineName").val();
+    $("#txtHospital").val();
+    $("#ddlStatus").val();
+   }
+
+   function Logout() {
+    location.href = "../View/Login.html";
+ }
+
+ function SaveVac() {
+    var table = document.getElementById("tblDataShow");
+    var rowCount=table.rows.length;
+    var hosName=$("#txtHospital").val();
+    var vacName=$("#txtVaccineName").val();
+    var status=$("#ddlStatus option:selected").text();
+    var tblRow=` <tr>
+    <td>`+(rowCount)+`</td>
+    <td>`+hosName+`</td>
+    <td>`+vacName+`</td>
+    <td>`+status+`</td>
+    <td><button onclick="DeleteVac(this)" title="Delete Vaccine">Delete</button></td>
+    <td><button onclick="EditVac()" title="Edit Vaccine">Edit</button></td>
+    </tr>`;
+    $("#tblDataShow").append(tblRow);
+   }
+
+   
+</script>  
+<body style="background-image: url(../Images/Dose.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> Add Vaccine <button style="float: right;" onclick="BackFunc()">Back To Main Dashboard</button></h1> <br>    
+       <div>
+        <label style="color: black;">Hospital Name</label>
+        <input type="text" id="txtHospital">
+        <label style="color: black;">Vaccine Name</label>
+        <input type="text" id="txtVaccineName">
+        <label style="color: black;">Status</label>
+        <select id="ddlStatus">
+            <option>-Select-</option>
+            <option>Available</option>
+            <option>UnAvailable</option>
+        </select>           
+       </div>    
+    <div><br> <br> 
+        <button id="btnSave" title="Save Data" onclick="SaveVac()">Save</button>         
+    </div>
+<br><br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Hospital Name</th>
+            <th>Vaccine Name</th>
+            <th>Status</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+    <tr>
+    <td>1</td>
+    <td>City Hospital</td>
+    <td>Covishield</td>
+    <td>Available</td>
+    <td><button onclick="DeleteVac(this)" title="Delete Vaccine">Delete</button></td>
+    <td><button onclick="EditVac()" title="Edit Vaccine">Edit</button></td>
+    </tr>
+
+    </table>
+
+
+</body>    
+</html>     

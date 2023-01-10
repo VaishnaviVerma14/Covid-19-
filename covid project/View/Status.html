@@ -1,0 +1,51 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/UserDashboard.html";
+ }
+
+ function Logout() {
+    location.href = "../View/UserLogin.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/Vaccine.png); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> My Status <button style="float: right;" onclick="BackFunc()">Back To Main Dashboard</button></h1> <br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Date Of Appoinment</th>
+            <th>Time</th>            
+            <th>Adhaar Card No</th>
+            <th>Phone Number</th>
+            <th>Hospital</th>
+            <th>Status</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Philip</td>
+            <td>Covid-19 Test</td>
+            <td>17-Jan-2022</td>
+            <td>11:00-12:00 AM</td>
+            <td>8654 3215 9864</td>
+            <td>9856324785</td>
+            <td>City Hospital</td>
+            <td>Pending</td>
+            </tr>        
+           
+    </table>
+</body>    
+</html>     

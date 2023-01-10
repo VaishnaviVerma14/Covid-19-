@@ -1,0 +1,93 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+   <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function OpenPage(PageId) {
+      switch(PageId){
+   case 1:location.href = "../View/CovidReport.html";
+   break;
+
+   case 2:location.href = "../View/GuideLine.html";
+   break;
+
+   case 3:location.href = "../View/AllPatient.html";
+   break;
+
+   case 4:location.href = "../View/BookingReport.html";
+   break;
+
+   case 5:location.href = "../View/AddVaccine.html";
+   break;
+
+   case 6:location.href = "../View/AddHospital.html";
+   break;
+
+   case 7:location.href = "../View/AllAppoinment.html";
+   break;
+
+      }    
+ }
+
+ function Logout() {
+    location.href = "../View/Login.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/BackGround.png); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: right;" onclick="Logout()" title="Logout">Logout</button> Admin Home</h1><br>    
+       <div id="divModule">
+
+         <div style="zoom:90%" onclick="OpenPage(1)">
+            <div class="q-Module">
+                <i></i>
+            <label class="q-label">Covid Report</label>
+            </div>
+         </div>
+
+
+         <div style="zoom:90%" onclick="OpenPage(2)">
+            <div class="q-Module">
+            <label class="q-label">Guidelines Report</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(3)">
+            <div class="q-Module">
+            <label class="q-label">All Patient</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(4)">
+            <div class="q-Module">
+            <label class="q-label">Booking Report</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(5)">
+            <div class="q-Module">
+            <label class="q-label">Add Vaccine</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(6)">
+            <div class="q-Module">
+            <label class="q-label">Add Hospital</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(7)">
+            <div class="q-Module">
+            <label class="q-label">All Appoinment</label>
+            </div>
+         </div>
+
+       </div>
+</body>    
+</html>     

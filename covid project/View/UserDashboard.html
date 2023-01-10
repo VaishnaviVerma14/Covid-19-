@@ -1,0 +1,65 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+   <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function OpenPage(PageId) {
+      switch(PageId){
+   case 1:location.href = "../View/RequestAppoinment.html";
+   break;
+
+   case 2:location.href = "../View/Status.html";
+   break;
+
+   case 3:location.href = "../View/CovidProtection.html";
+   break;
+
+   case 4:location.href = "../View/Profile.html";
+   break;
+      }    
+ }
+
+ function Logout() {
+    location.href = "../View/UserLogin.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/CovidImg3.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: right;" onclick="Logout()" title="Logout">Logout</button> User Home</h1><br>    
+       <div id="divModule">
+
+         <div style="zoom:90%" onclick="OpenPage(1)">
+            <div class="q-Module">
+                <i></i>
+            <label class="q-label">Request Appoinment</label>
+            </div>
+         </div>
+
+
+         <div style="zoom:90%" onclick="OpenPage(2)">
+            <div class="q-Module">
+            <label class="q-label">My Status</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(3)">
+            <div class="q-Module">
+            <label class="q-label">Covid Protection</label>
+            </div>
+         </div>
+
+         <div style="zoom:90%" onclick="OpenPage(4)">
+            <div class="q-Module">
+            <label class="q-label">My Profile</label>
+            </div>
+         </div>        
+
+       </div>
+</body>    
+</html>     

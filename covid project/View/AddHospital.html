@@ -1,0 +1,90 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/Dashboard.html";
+   }
+
+
+   function DeleteHosp(row) {
+    var i =row.parentNode.parentNode.rowIndex;
+    document.getElementById("tblDataShow").deleteRow(i);
+   }
+
+
+   function EditHosp() {
+    $("#txtHospitalName").val();
+    $("#txtAddress").val();
+    $("#txtPhoneNumber").val();
+   }
+
+
+   function SaveHosp() {
+    var table = document.getElementById("tblDataShow");
+    var rowCount=table.rows.length;
+    var hosName=$("#txtHospitalName").val();
+    var add=$("#txtAddress").val();
+    var no=$("#txtPhoneNumber").val();
+    var tblRow=` <tr>
+    <td>`+(rowCount)+`</td>
+    <td>`+hosName+`</td>
+    <td>`+add+`</td>
+    <td>`+no+`</td>
+    <td><button onclick="DeleteHosp(this)" title="Delete Hospital">Delete</button></td>
+    <td><button onclick="EditHosp()" title="Edit Hospital">Edit</button></td>
+    </tr>`;
+    $("#tblDataShow").append(tblRow);
+   }
+
+
+   function Logout() {
+    location.href = "../View/Login.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/Doctor.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> Add Hospital <button style="float: right;" onclick="BackFunc()">Back To Main Dashboard</button></h1> <br>    
+       <div>
+        <label style="color: black;">Hospital Name</label>
+        <input type="text" id="txtHospitalName"> 
+        <label style="color: black;">Address</label>
+        <input type="text" id="txtAddress">
+        <label style="color: black;">Phone Number</label>
+        <input type="text" id="txtPhoneNumber">           
+       </div>    
+    <div><br> <br> 
+        <button id="btnSave" title="Save Data" onclick="SaveHosp()">Save</button>         
+    </div>
+<br><br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Hospital Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+    <tr>
+    <td>1</td>
+    <td>City Hospital</td>
+    <td>Bareilly</td>
+    <td>9856324785</td>
+    <td><button onclick="DeleteHosp(this)" title="Delete Hospital">Delete</button></td>
+    <td><button onclick="EditHosp()" title="Edit Hospital">Edit</button></td>
+    </tr>
+
+    </table>
+
+
+</body>    
+</html>     

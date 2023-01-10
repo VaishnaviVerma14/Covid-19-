@@ -1,0 +1,219 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/Dashboard.html";
+ }
+
+ function Logout() {
+    location.href = "../View/Login.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/CovidImg1.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> Covid-19 Report <button style="float: right;" onclick="BackFunc()" title="Go To Dashboard">Back To Main Dashboard</button></h1> <br>    
+       <div>
+        <label style="color: black;">From Date</label>
+        <input type="date" id="txtFromDate"> 
+        <label style="color: black;">To Date</label>
+        <input type="date" id="txtToDate">     
+        <button id="btnSearch" title="Search Data">Search</button>              
+       </div>        
+<br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Phone Number</th>
+            <th>Date</th>
+            <th>Address</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Dale</td>
+            <td>negative</td>
+            <td>6525684952</td>
+            <td>17-Jan-2022</td>
+            <td>1,kurwanchal nagar Bareilly</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>Dhurv</td>
+                <td>negative</td>
+                <td>6525684952</td>
+                <td>17-Jan-2022</td>
+                <td>A37,rampur graden Bareilly</td>
+                </tr>
+        
+                <tr>
+                    <td>3</td>
+                    <td>Prem</td>
+                    <td>Positive</td>
+                    <td>995688843</td>
+                    <td>18-Jan-2022</td>
+                    <td>C47,rampur graden Bareilly</td>
+                    </tr>
+        
+                    <tr>
+                        <td>4</td>
+                        <td>Akkshita</td>
+                        <td>Positive</td>
+                        <td>9809456713</td>
+                        <td>19-Jan-2022</td>
+                        <td>A40,Headal Colony Bareilly</td>
+                        </tr>
+        
+                        <tr>
+                            <td>5</td>
+                            <td>Pallavhi</td>
+                            <td>negative</td>
+                            <td>9425684952</td>
+                            <td>21-Jan-2022</td>
+                            <td>37,Post office Bareilly</td>
+                            </tr>
+        
+                            <tr>
+                                <td>6</td>
+                                <td>Vassu</td>
+                                <td>negative</td>
+                                <td>9546784952</td>
+                                <td>24-Jan-2022</td>
+                                <td>11,Model Town Bareilly</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>7</td>
+                                    <td>Varun</td>
+                                    <td>negative</td>
+                                    <td>9845632190</td>
+                                    <td>26-Jan-2022</td>
+                                    <td>A34,rampur graden Bareilly</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Navid</td>
+                                        <td>Positive</td>
+                                        <td>9760114566</td>
+                                        <td>30-Jan-2022</td>
+                                        <td>A90,City road Bareilly</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Abhi</td>
+                                            <td>Positive</td>
+                                            <td>9980964321</td>
+                                            <td>31-Jan-2022</td>
+                                            <td>B36,MD Colony Bareilly</td>
+                                            </tr>
+        
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Nayra</td>
+                                                <td>negative</td>
+                                                <td>9557348120</td>
+                                                <td>4-Feb-2022</td>
+                                                <td>44,Green Park Bareilly</td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>Anushka</td>
+                                                    <td>Positive</td>
+                                                    <td>9410088132</td>
+                                                    <td>10-Feb-2022</td>
+                                                    <td>240,Old City Bareilly</td>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Taniya</td>
+                                                        <td>Positive</td>
+                                                        <td>9410076134</td>
+                                                        <td>15-Feb-2022</td>
+                                                        <td>343,Sun city Bareilly</td>
+                                                        </tr>
+        
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>Aashish</td>
+                                                            <td>Positive</td>
+                                                            <td>9758304114</td>
+                                                            <td>17-Feb-2022</td>
+                                                            <td>A23,Aasutosh Colony Bareilly</td>
+                                                            </tr>
+        
+                                                            <tr>
+                                                                <td>14</td>
+                                                                <td>Sherya</td>
+                                                                <td>Positive</td>
+                                                                <td>8630959093</td>
+                                                                <td>21-Feb-2022</td>
+                                                                <td>A37,Sun City Bareilly</td>
+                                                                </tr>
+        
+                                                                <tr>
+                                                                    <td>15</td>
+                                                                    <td>Snaya</td>
+                                                                    <td>negative</td>
+                                                                    <td>9555674326</td>
+                                                                    <td>26-Feb-2022</td>
+                                                                    <td>90,rampur graden Bareilly</td>
+                                                                    </tr>
+        
+                                                                    <tr>
+                                                                        <td>16</td>
+                                                                        <td>Rahul</td>
+                                                                        <td>negative</td>
+                                                                        <td>9480426709</td>
+                                                                        <td>28-Feb-2022</td>
+                                                                        <td>143,Junction Road Bareilly</td>
+                                                                        </tr>
+        
+                                                                        <tr>
+                                                                            <td>17</td>
+                                                                            <td>Santosh</td>
+                                                                            <td>Positive</td>
+                                                                            <td>9808168495</td>
+                                                                            <td>5-Mar-2022</td>
+                                                                            <td>C45,Rajendra Nagar Bareilly</td>
+                                                                            </tr>
+        
+                                                                            <tr>
+                                                                                <td>18</td>
+                                                                                <td>Anand</td>
+                                                                                <td>Positive</td>
+                                                                                <td>6398014321</td>
+                                                                                <td>10-Mar-2022</td>
+                                                                                <td>A37,Rajendra Nagar Bareilly</td>
+                                                                                </tr>
+        
+                                                                                <tr>
+                                                                                    <td>19</td>
+                                                                                    <td>Sarita</td>
+                                                                                    <td>negative</td>
+                                                                                    <td>7983702311</td>
+                                                                                    <td>17-Mar-2022</td>
+                                                                                    <td>38,DD Puram Road Bareilly</td>
+                                                                                    </tr>
+        
+
+
+    </table>
+
+
+</body>    
+</html>     

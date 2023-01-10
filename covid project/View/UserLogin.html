@@ -1,0 +1,55 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Covid Project</title>    
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">    
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+   function UserLogin() {
+    var name=$("#Uname").val();  
+    var pass=$("#Pass").val();  
+ if(name==""){
+    alert("Please Enter User Name");
+ }
+ else if(pass==""){
+    alert("Please Enter Password");
+ }
+ else if (name=="Karishma" && pass=="12345") {
+    location.href = "../View/UserDashboard.html";
+ } else {
+     alert("Incorrect UserName or Password")
+ }    
+   }
+
+   function Exit() {
+    location.href = "../View/MailLogin.html";
+ }
+   
+</script>  
+<body  style="background-image: url(../Images/CovidImg1.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: right;" onclick="Exit()" title="Back To Main login">Back To Main login</button> User Login</h1><br>    
+    <div class="login">    
+    <form id="login" method="get" action="login.php">    
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br>    
+        <input type="button" name="log" id="log" title="Click to Login" style="cursor: pointer;" onclick="UserLogin()" value="LogIn">       
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>    
+        <a href="#">Forgot Password</a>    
+    </form>     
+</div>    
+</body>    
+</html>     

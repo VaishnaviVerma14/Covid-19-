@@ -1,0 +1,51 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/MailLogin.html";
+   }
+
+   function SaveAcc() {
+   alert("Your Account Created Successfully")
+   }
+   
+</script>  
+<body style="background-image: url(../Images/Doctor.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1> Create Account <button style="float: right;" onclick="BackFunc()">Back</button></h1> <br>    
+       <div>
+        <label style="color: black;">Account Type</label>
+        <select id="ddlType" style="margin-left: 124px; width: 177px">
+            <option>-Select-</option>
+            <option>Admin User</option>
+            <option>Normal User</option>
+        </select>
+        <label style="color: black;">Name</label>
+        <input type="text" id="txtName" style="margin-left:105px;"> 
+         <label style="color: black;">Address</label>
+        <input type="text" id="txtAddress" style="margin-left: 11px;">               
+       </div>  
+       <br> 
+       <div>
+        <label style="color: black;">Adhaar Card Number</label>
+        <input type="text" id="txtAdhaarNumber" style="margin-left: 64px;">
+        <label style="color: black;">Phone Number</label>
+        <input type="text" id="txtPhoneNumber" style="margin-left: 37px">  
+        <label style="color: black;">Password</label>
+        <input type="password" id="txtPassword" >        
+       </div>
+       
+    <div><br> <br> 
+        <button id="btnSave" title="Save Data" style="margin-left:230px;width: 120px" onclick="SaveAcc()">Save</button>         
+    </div>
+<br><br><br>
+    
+</body>    
+</html>     

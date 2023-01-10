@@ -1,0 +1,252 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/Dashboard.html";
+ }
+
+ function Logout() {
+    location.href = "../View/Login.html";
+ }
+   
+ function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("txtPatientName");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tblDataShow");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+</script>  
+<body style="background-image: url(../Images/Patient.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> All Patient Details <button style="float: right;" onclick="BackFunc()" title="Go To Dashboard">Back To Main Dashboard</button></h1> <br>    
+       <div>
+        <input type="text" id="txtPatientName" style="width: 250px;margin-left: 2px;" placeholder="Search on Patient Name" onkeyup="myFunction()">        
+       </div>   
+<br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Patient Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Addhar Card Number</th>
+            <th>Address</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Dale</td>
+            <td>abc@gmail.com</td>
+            <td>6525684952</td>
+            <td>5896 3214 5698</td>
+            <td>Bareilly</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>Rahul</td>
+                <td>rahul@gmail.com</td>
+                <td>7348568495</td>
+                <td>6785 3014 5698</td>
+                <td>Bareilly</td>
+                </tr>
+        
+                <tr>
+                    <td>3</td>
+                    <td>Shafia</td>
+                    <td>shafia23@gmail.com</td>
+                    <td>9758304114</td>
+                    <td>9435 3214 5698</td>
+                    <td>Bareilly</td>
+                    </tr>
+        
+                    <tr>
+                        <td>4</td>
+                        <td>Snaya</td>
+                        <td>123snaya@gmail.com</td>
+                        <td>7060725928</td>
+                        <td>4567 8765 3479</td>
+                        <td>Bareilly</td>
+                        </tr>
+        
+                        <tr>
+                            <td>5</td>
+                            <td>Vertika</td>
+                            <td>vertika56@gmail.com</td>
+                            <td>8273340393</td>
+                            <td>7896 7614 4698</td>
+                            <td>Bareilly</td>
+                            </tr>
+        
+                            <tr>
+                                <td>6</td>
+                                <td>Abhi</td>
+                                <td>abhi456@gmail.com</td>
+                                <td>7817033735</td>
+                                <td>6754 6532 5698</td>
+                                <td>Bareilly</td>
+                                </tr>
+        
+                                <tr>
+                                    <td>7</td>
+                                    <td>Akshit</td>
+                                    <td>Akshit90@gmail.com</td>
+                                    <td>9805684952</td>
+                                    <td>5876 3214 5698</td>
+                                    <td>Bareilly</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Tuba</td>
+                                        <td>Hussaintuba@gmail.com</td>
+                                        <td>9808964566</td>
+                                        <td>4590 6549 5698</td>
+                                        <td>Bareilly</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Akkshita</td>
+                                            <td>Akku123@gmail.com</td>
+                                            <td>780190870</td>
+                                            <td>5896 6714 9098</td>
+                                            <td>Bareilly</td>
+                                            </tr>
+        
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Varun</td>
+                                                <td>varun876@gmail.com</td>
+                                                <td>8345908712</td>
+                                                <td>5896 3214 5698</td>
+                                                <td>Bareilly</td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>Vassu</td>
+                                                    <td>vassu45@gmail.com</td>
+                                                    <td>9634742197</td>
+                                                    <td>3836 3214 4698</td>
+                                                    <td>Bareilly</td>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Almas</td>
+                                                        <td>almas77@gmail.com</td>
+                                                        <td>9027414907</td>
+                                                        <td>5689 3215 5698</td>
+                                                        <td>Bareilly</td>
+                                                        </tr>
+        
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>Aman</td>
+                                                            <td>Aman00@gmail.com</td>
+                                                            <td>6528900521</td>
+                                                            <td>5006 3254 5348</td>
+                                                            <td>Bareilly</td>
+                                                            </tr>
+        
+                                                            <tr>
+                                                                <td>14</td>
+                                                                <td>Amash</td>
+                                                                <td>amash45@gmail.com</td>
+                                                                <td>6500684952</td>
+                                                                <td>9003 3214 5698</td>
+                                                                <td>Bareilly</td>
+                                                                </tr>
+        
+                                                                <tr>
+                                                                    <td>15</td>
+                                                                    <td>Arjun</td>
+                                                                    <td>arjun432@gmail.com</td>
+                                                                    <td>9678684952</td>
+                                                                    <td>5896 3214 5698</td>
+                                                                    <td>Bareilly</td>
+                                                                    </tr>
+        
+                                                                    <tr>
+                                                                        <td>16</td>
+                                                                        <td>Amit</td>
+                                                                        <td>amit@gmail.com</td>
+                                                                        <td>6525774952</td>
+                                                                        <td>6778 3214 5698</td>
+                                                                        <td>Bareilly</td>
+                                                                        </tr>
+        
+                                                                        <tr>
+                                                                            <td>17</td>
+                                                                            <td>Basant</td>
+                                                                            <td>basant@gmail.com</td>
+                                                                            <td>9880568492</td>
+                                                                            <td>3296 3214 5698</td>
+                                                                            <td>Bareilly</td>
+                                                                            </tr>
+        
+                                                                            <tr>
+                                                                                <td>18</td>
+                                                                                <td>Anjali</td>
+                                                                                <td>anjalic@gmail.com</td>
+                                                                                <td>9999184952</td>
+                                                                                <td>5899 3214 9943</td>
+                                                                                <td>Bareilly</td>
+                                                                                </tr>
+        
+                                                                                <tr>
+                                                                                    <td>19</td>
+                                                                                    <td>John</td>
+                                                                                    <td>john456@gmail.com</td>
+                                                                                    <td>9525684952</td>
+                                                                                    <td>4896 3214 5698</td>
+                                                                                    <td>Bareilly</td>
+                                                                                    </tr>
+        
+                                                                                    <tr>
+                                                                                        <td>20</td>
+                                                                                        <td>Dhurv</td>
+                                                                                        <td>dhurv323@gmail.com</td>
+                                                                                        <td>8438825690</td>
+                                                                                        <td>8796 4014 5698</td>
+                                                                                        <td>Bareilly</td>
+                                                                                        </tr>
+        
+                                                                                        <tr>
+                                                                                            <td>21</td>
+                                                                                            <td>Dev</td>
+                                                                                            <td>dev78@gmail.com</td>
+                                                                                            <td>9102684952</td>
+                                                                                            <td>8896 6214 5698</td>
+                                                                                            <td>Bareilly</td>
+                                                                                            </tr>
+        
+
+    </table>
+
+
+</body>    
+</html>     

@@ -1,0 +1,57 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/Dashboard.html";
+ }
+
+ function Logout() {
+    location.href = "../View/Login.html";
+ }
+   
+ function AcceptApp() {
+  alert("Appoinment Accepted Successfully");
+   }
+
+   function RejectApp() {
+    alert("Appoinment Rejected Successfully");
+   }
+
+</script>  
+<body style="background-image: url(../Images/Patient.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> All Appoinment Details <button style="float: right;" onclick="BackFunc()" title="Go To Dashboard">Back To Main Dashboard</button></h1> <br>    
+  
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Patient Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Addhar Card Number</th>
+            <th>Address</th>
+            <th>Accept Appoinment</th>
+            <th>Reject Appoinment</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Dale</td>
+            <td>abc@gmail.com</td>
+            <td>6525684952</td>
+            <td>5896 3214 5698</td>
+            <td>Bareilly</td>
+            <td><button onclick="AcceptApp(this)" title="Accept Appoinment">Accept</button></td>
+            <td><button onclick="RejectApp()" title="Reject Appoinment">Reject</button></td>
+            </tr>
+           
+    </table>
+</body>    
+</html>     

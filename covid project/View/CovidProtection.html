@@ -1,0 +1,47 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+    <title>Covid Project</title> 
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>  
+<script src="../CSS/Javascript.js"></script>
+<script>
+
+   function BackFunc() {
+    location.href = "../View/UserDashboard.html";
+ }
+
+ function Logout() {
+    location.href = "../View/UserLogin.html";
+ }
+   
+</script>  
+<body style="background-image: url(../Images/CovidPre.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ">    
+    <h1><button style="float: left;" onclick="Logout()" title="Logout">Logout</button> Covid Protection <button style="float: right;" onclick="BackFunc()">Back To Main Dashboard</button></h1> <br><br>
+
+    <table id="tblDataShow" style="width: 100%; border-collapse: collapse;background-color: #808080d1;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Symptons</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Remedies</th>            
+            <th>Description</th>
+            <th>Hints</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Breathe Issue</td>
+            <td>All Ages</td>
+            <td>All</td>
+            <td>Take Hot Water</td>
+            <td>Take normal medicines as per Doctor</td>
+            <td>Don't Take Cold Drinks</td>
+            </tr>        
+           
+    </table>
+</body>    
+</html>     
